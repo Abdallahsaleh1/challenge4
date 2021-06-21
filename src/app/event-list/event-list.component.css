@@ -1,0 +1,62 @@
+
+#container{
+height: 500px;
+background-color: #91bbf3;
+overflow-y: scroll;
+width: 60%;
+margin-left: auto;
+margin-right: auto;  
+}
+.card{
+padding: 1rem;
+margin-bottom: 1rem;
+width: 95%;
+margin-left: 40px;
+     
+}
+    
+* {
+box-sizing: border-box;
+}
+
+.logo {
+width: 25%;
+float: left;
+padding: 15px;
+border: 1px ;
+height: 80px;
+}
+      
+.description {
+width: 45%;
+float: left;
+padding: 15px;
+border: 1px ;
+height: 80px;
+    
+}
+.occurence {
+width: 15%;
+float: right;
+padding: 15px;
+border: 1px ;
+height: 80px;
+}
+
+.duration {
+width: 15%;
+float: right;
+padding: 15px;
+border: 1px ;
+height: 80px;
+}
+
+#PlayButton{
+  margin-left: 48%;
+  margin-right: auto;
+}
+
+.commentsParent {
+display: inline;
+margin-left: 10px;
+}

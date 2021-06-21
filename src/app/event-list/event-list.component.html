@@ -1,0 +1,37 @@
+<!-- <div style="text-align: center;"> -->
+<div id="container" >
+    <br>
+  <div class="card" *ngFor = "let event of Events; let i = index">
+    <div class="contain" style=" background-color: rgb(255, 255, 255);">
+      <div class="logo"  [ngStyle] = "{'background-color' : event.playTime === timer && show === true  ? '#606368' : 'white' }">
+        <img *ngIf = "3 == event.type" src="assets/svg/click.svg" style="height: 40px;">
+        <img *ngIf = "4 == event.type" src="assets/svg/visit.svg" style="height: 40px;">
+      </div>
+      
+      <div class="description" [ngStyle] = "{'background-color' : event.playTime === timer && show === true  ? '#606368' : 'white' }">
+        
+        <p>{{event.description}}</p>
+        
+      </div>
+      <div class="occurence" [ngStyle] = "{'background-color' : event.playTime === timer && show === true  ? '#606368' : 'white' }">
+        
+        <p>Occurence: {{event.time}}</p>
+        
+      </div>
+      <div class="duration" [ngStyle] = "{'background-color' : event.playTime === timer && show === true ? '#606368' : 'white' }">
+        
+        <p>Duration time: {{event.duration}}</p>
+        
+      </div>
+    </div>
+    <span style="height: 1px;">&nbsp;</span>
+    <div *ngFor = "let comment of allComments" class = "commentsParent">
+        <div *ngIf = "comment.occ > Events[i].playTime && Events[i+1].playTime > comment.occ || comment.occ === Events[i].playTime" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Comment: {{comment.comment}} || occurence: {{comment.occ}}"  style="background-color: rgb(179, 132, 71);"></div>
+      </div>
+
+  </div>
+</div>
+
+<br>
+<button id="PlayButton" class="btn btn-primary" (click)="Play()" >Play</button> 
+
